@@ -6,7 +6,69 @@
 
     <groupId>FB2</groupId>
     <artifactId>Flying Base 2</artifactId>
+    <packaging>war</packaging>
     <version>1.0</version>
+    <name>Flying Base 2</name>
 
+    <!--Versions of libraries-->
+    <properties>
+        <spring.version>4.3.2.RELEASE</spring.version>
+        <spring.security.version>4.2.0.RELEASE</spring.security.version>
+        <hibernate-version>5.2.4.Final</hibernate-version>
+        <jackson.version>2.7.8</jackson.version>
+        <jacksonCSV.version>2.7.0</jacksonCSV.version>
+        <junit.version>4.12</junit.version>
+    </properties>
+
+    <dependencies>
+    <!--Spring Framework-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!--JSP -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+    </dependencies>
+
+    <!-- project compilation options -->
+    <build>
+        <finalName>Flying Base 2</finalName>
+        <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+        <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <warSourceDirectory>${basedir}/web</warSourceDirectory>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
