@@ -16,7 +16,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan({"software.neocortex.config", "software.neocortex.controller.*", "software.neocortex.*"})
+@ComponentScan({"software.neocortex.config", "software.neocortex.controller.*", "software.neocortex.model.*", "software.neocortex.*"})
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Bean
