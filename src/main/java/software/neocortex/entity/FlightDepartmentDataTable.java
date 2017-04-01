@@ -32,7 +32,7 @@ public class FlightDepartmentDataTable {
     private String airfaseEvent1;
 
     @Column(name = "AE")
-    private String aviaSquadron;
+    private int aviaSquadron;
 
     @Column(name = "Necessary_things")
     private String basedRisk;
@@ -44,7 +44,7 @@ public class FlightDepartmentDataTable {
     private String acceptance;
 
     @Column(name = "Risk_index")
-    private String finalRisk;
+    private int finalRisk;
 
     @Column(name = "Talon_closure")
     private String closure;
@@ -116,11 +116,11 @@ public class FlightDepartmentDataTable {
         this.airfaseEvent1 = airfaseEvent1;
     }
 
-    public String getAviaSquadron() {
+    public int getAviaSquadron() {
         return aviaSquadron;
     }
 
-    public void setAviaSquadron(String aviaSquadron) {
+    public void setAviaSquadron(int aviaSquadron) {
         this.aviaSquadron = aviaSquadron;
     }
 
@@ -148,11 +148,11 @@ public class FlightDepartmentDataTable {
         this.acceptance = acceptance;
     }
 
-    public String getFinalRisk() {
+    public int getFinalRisk() {
         return finalRisk;
     }
 
-    public void setFinalRisk(String finalRisk) {
+    public void setFinalRisk(int finalRisk) {
         this.finalRisk = finalRisk;
     }
 
