@@ -1,25 +1,52 @@
 package software.neocortex.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "flightdata")
 public class FlightDepartmentDataTable {
     @Id
+    @Column(name = "flightdata_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(name = "Incoming_number")
     private String incomingNumber;
+
+    @Column(name = "Date_of_flight")
     private String dateOfFlight;
+
+    @Column(name = "Flight_number")
     private String flightNumber;
+
+    @Column(name = "Departure")
     private String departure;
+
+    @Column(name = "Arrival")
     private String arrival;
+
+    @Column(name = "Tail_number")
     private String aircraftTailNumber;
+
+    @Column(name = "Event_AirFASE_1")
     private String airfaseEvent1;
-    private String aviaesquadra;
+
+    @Column(name = "AE")
+    private String aviaSquadron;
+
+    @Column(name = "Necessary_things")
     private String basedRisk;
+
+    @Column(name = "Deadline_cor_act")
     private String correctiveActionDeadline;
+
+    @Column(name = "Cor_act_accepted")
     private String acceptance;
+
+    @Column(name = "Risk_index")
     private String finalRisk;
+
+    @Column(name = "Talon_closure")
     private String closure;
 
     public FlightDepartmentDataTable() {
@@ -89,12 +116,12 @@ public class FlightDepartmentDataTable {
         this.airfaseEvent1 = airfaseEvent1;
     }
 
-    public String getAviaesquadra() {
-        return aviaesquadra;
+    public String getAviaSquadron() {
+        return aviaSquadron;
     }
 
-    public void setAviaesquadra(String aviaesquadra) {
-        this.aviaesquadra = aviaesquadra;
+    public void setAviaSquadron(String aviaSquadron) {
+        this.aviaSquadron = aviaSquadron;
     }
 
     public String getBasedRisk() {
