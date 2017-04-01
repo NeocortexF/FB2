@@ -15,11 +15,11 @@ public class QueryExample {
 
     public String tableCreation() {
         try {
-            jdbcTemplate.execute("CREATE TABLE COMPANY(" +
-                    "ID INT PRIMARY KEY NOT NULL, " +
-                    "NAME TEXT NOT NULL, " +
-                    "AGE INT NOT NULL," +
-                    ");");
+            jdbcTemplate.execute("CREATE TABLE `testschema`.`company` (\n" +
+                    "  `Company_ID` INT NOT NULL,\n" +
+                    "  `Company_Name` VARCHAR(255) NULL,\n" +
+                    "  `CEO` VARCHAR(45) NULL,\n" +
+                    "  PRIMARY KEY (`Company_ID`));");
             return "table created";
         } catch (Exception e) {
             return "Error: " + e;
