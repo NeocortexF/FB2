@@ -1,4 +1,6 @@
 package software.neocortex.dao.impl;
 
-public class FlightDepartmentDAOImpl {
+import software.neocortex.dao.FlightDepartmentDAO;
+
+public class FlightDepartmentDAOImpl implements FlightDepartmentDAO {
 }
