@@ -11,20 +11,20 @@ import software.neocortex.service.FlightDepartmentService;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-@org.springframework.web.bind.annotation.RestController
+//@org.springframework.web.bind.annotation.RestController
 public class RestController {
 
     @Autowired
     FlightDepartmentService flightDepartmentService;
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public List<FlightDepartmentDataTable> getFlightDepTable() {
+    @RequestMapping(value = "/FD/all", method = RequestMethod.GET)
+    public List<FlightDepartmentDataTable> getFlightDepartmentTable() {
         return flightDepartmentService.getFlightDepartmentDataTable();
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json; encoding=UTF-8")
+    @RequestMapping(value = "/FD/{id}", method = RequestMethod.GET, produces = "application/json; encoding=UTF-8")
     @ResponseBody
-    public Object getQuestion(@PathVariable(value = "id") String inputId, HttpServletResponse response) {
+    public Object getFlightEvent(@PathVariable(value = "id") String inputId, HttpServletResponse response) {
         try {
             int flightDataId = Integer.valueOf(inputId);
             FlightDepartmentDataTable flightDepartmentDataTable = flightDepartmentService.getFlightDepartmentDataById(flightDataId);
