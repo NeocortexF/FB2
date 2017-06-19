@@ -11,7 +11,7 @@ import software.neocortex.service.FlightDepartmentService;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-//@org.springframework.web.bind.annotation.RestController
+@org.springframework.web.bind.annotation.RestController
 public class RestController {
 
     @Autowired

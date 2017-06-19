@@ -19,7 +19,7 @@ public class FlightDepartmentDAOImpl implements FlightDepartmentDAO {
     public FlightDepartmentDataTable getFlightDepartmentDataById(int id) {
         Criteria criteria = sessionFactory.getCurrentSession().
                 createCriteria(FlightDepartmentDataTable.class);
-        criteria.add(Restrictions.eq("id", id));
+        criteria.add(Restrictions.eq("flightdata_id", id));
         return (FlightDepartmentDataTable) criteria.uniqueResult();
     }
 

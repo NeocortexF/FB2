@@ -3,7 +3,7 @@ package software.neocortex.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "flightdata")
+@Table(name = "flightdata", schema="testschema")
 public class FlightDepartmentDataTable {
     @Id
     @Column(name = "flightdata_id")
