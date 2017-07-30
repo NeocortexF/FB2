@@ -8,10 +8,9 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import software.neocortex.model.Message;
-import software.neocortex.model.QueryExample;
 
 @Configuration
-@PropertySource(value = {"classpath:util.properties"})
+@PropertySource(value = {"classpath:hibernate.properties"})
 public class AppConfig {
 
     @Autowired
@@ -38,15 +37,11 @@ public class AppConfig {
         return dataSource;
     }
 
+    //Нах не нужен
     @Bean
     public JdbcTemplate jdbcTemplate() {
         JdbcTemplate jdbcTemplate = new JdbcTemplate();
         jdbcTemplate.setDataSource(dataSource());
         return jdbcTemplate;
-    }
-
-    @Bean
-    public QueryExample queryExample() {
-        return new QueryExample(jdbcTemplate());
     }
 }

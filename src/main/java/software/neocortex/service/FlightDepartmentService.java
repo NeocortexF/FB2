@@ -8,7 +8,7 @@ import software.neocortex.entity.FlightDepartmentDataTable;
 
 import java.util.List;
 
-@Component
+@Component("FlightDepartmentService")
 @Transactional
 public class FlightDepartmentService {
     @Autowired

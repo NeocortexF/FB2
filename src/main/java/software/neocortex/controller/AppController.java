@@ -18,7 +18,7 @@ public class AppController {
     public String getEventsList(Model model) {
         model.addAttribute("allEvents", flightDepartmentService.getFlightDepartmentDataTable());
         return "testFromBase";
-   //     return flightDepartmentService.getFlightDepartmentDataTable();
+      //  return flightDepartmentService.getFlightDepartmentDataTable();
     }
 
 

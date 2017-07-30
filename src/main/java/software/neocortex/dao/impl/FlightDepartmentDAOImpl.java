@@ -27,6 +27,9 @@ public class FlightDepartmentDAOImpl implements FlightDepartmentDAO {
     public List<FlightDepartmentDataTable> getFlightDepartmentDataTable() {
         Criteria criteria = sessionFactory.getCurrentSession().
                 createCriteria(FlightDepartmentDataTable.class);
+        //проблема похоже в том, что критерия лист дает полный перечень всей таблицы
+        //а у тебя в моделе данных не все поля и еще и в другом порядке
+        //нужно как то вытаскивать поу одном
         return (List<FlightDepartmentDataTable>) criteria.list();
     }
 }
